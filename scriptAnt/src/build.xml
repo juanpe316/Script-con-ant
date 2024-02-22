@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="scriptAnt" default="todo">
+
+   <target name="todo" depends="empaquetar, documentar">
+   </target>
+
+	<target name="empaquetar" depends="compilar">
+      <jar destfile="../jar/fichero.jar" includes="../class/scriptAnt/*.class"/>
+   </target>
+
+   <target name="compilar">
+      <javac srcdir="." destdir="../class"/>
+   </target>
+   
+   <target name="documentar">
+      <javadoc sourcepath="." destdir="../javadoc" packagenames="*"/>
+   </target>
+
+</project>
+
+
+
